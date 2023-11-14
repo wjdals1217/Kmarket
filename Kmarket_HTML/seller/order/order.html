@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>케이마켓::판매자</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>    
+    <script src="../js/gnb.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/seller.css">
+    <script>
+        $(function(){
+            $('table a').click(function(e){
+                e.preventDefault();
+                $(this).text('완료');
+                $(this).prev().prev().show();
+                $(this).prev().hide();
+            });
+            /* 완료링크 눌리면 배송상태 변경하는 기능 구현 */
+        });
+    </script>
+</head>
+<body>
+    <div id="seller-wrapper">
+        <header>
+            <div>
+                <a href="./index.html" class="logo"><img src="./img/admin_logo.png" alt="admin_logo"/></a>
+                <p>
+                    <span>홍길동님 반갑습니다.</span>
+                    <a href="#">HOME |</a>
+                    <a href="#">로그아웃 |</a>
+                    <a href="#">고객센터</a>
+                </p>
+            </div>
+        </header>
+        <main>
+            <aside>
+                <!-- Global Navigation Bar -->
+                <ul id="gnb">
+                    <li>
+                        <a href="#"><i class="fas fa-box-open" aria-hidden="true"></i>상품관리</a>
+                        <ol>
+                            <li><a href="/seller/product/list.html">상품현황</a></li>
+                            <li><a href="/seller/product/register.html">상품등록</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i>주문관리</a>
+                        <ol>
+                            <li><a href="/seller/order/order.html">주문현황</a></li>
+                            <li><a href="/seller/order/delivery.html">취소/반품/교환</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>고객문의</a>
+                        <ol>
+                            <li><a href="/seller/board/qna.html">Kmarket사용문의</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </aside>
+            <section id="seller-order-order">
+                <nav>
+                    <h3>주문현황</h3>
+                    <p>
+                        HOME > 주문관리 > <strong>주문현황</strong>
+                    </p>
+                </nav>
+                <!-- 주문현황 컨텐츠 시작 -->         
+                <!-- ordNo, prodName, ordUid, ordDate, deliveryStatus, ordComplete(수정가능) -->                      
+                <section>
+                    <div>
+                        <select name="search">
+                            <option value="search1">주문번호</option>
+                            <option value="search1">상품명</option>
+                            <option value="search1">주문일자</option>
+                        </select>
+                        <input type="text" name="search">
+                    </div>
+                    <p class="sort">
+                        <a href="#" class="on">전체&nbsp;|</a>
+                        <a href="#" class="off">입금대기&nbsp;|</a>
+                        <a href="#" class="off">판매량 많은 순&nbsp;|</a>
+                        <a href="#" class="off">판매금액 많은 순&nbsp;</a>
+                    </p>
+                    <table>
+                        <tr>
+                            <th>주문번호</th>
+                            <th>상품사진</th>
+                            <th>상품명</th>
+                            <th>주문일자</th>
+                            <th>입금상태</th>
+                            <th>배송상태</th>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td><img src="/seller/img/sample_thumb.jpg" alt="상품사진"></td>
+                            <td>티셔츠</td>
+                            <td>23-05-25</td>
+                            <td>
+                                <label><input type="checkbox">입금완료확인</label>
+                            </td>
+                            <td>
+                                <select name="deliveryStatus">
+                                    <option value="not">배송전</option>
+                                    <option value="ing">배송중</option>
+                                    <option value="success">배송완료</option>
+                                </select>
+                                <span>배송전</span>
+                                <a href="#"><수정></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="/seller/img/sample_thumb.jpg" alt="상품사진"></td>
+                            <td>티셔츠</td>
+                            <td>23-05-25</td>
+                            <td>
+                                <label><input type="checkbox">입금완료확인</label>
+                            </td>
+                            <td>
+                                <select name="deliveryStatus">
+                                    <option value="not">배송전</option>
+                                    <option value="ing">배송중</option>
+                                    <option value="success">배송완료</option>
+                                </select>
+                                <span>배송전</span>
+                                <a href="#"><수정></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="/seller/img/sample_thumb.jpg" alt="상품사진"></td>
+                            <td>티셔츠</td>
+                            <td>23-05-25</td>
+                            <td>
+                                <label><input type="checkbox">입금완료확인</label>
+                            </td>
+                            <td>
+                                <select name="deliveryStatus">
+                                    <option value="not">배송전</option>
+                                    <option value="ing">배송중</option>
+                                    <option value="success">배송완료</option>
+                                </select>
+                                <span>배송전</span>
+                                <a href="#"><수정></a>
+                            </td>
+                        </tr>
+                        
+                    </table>
+
+                    <div class="paging">
+                        <span class="prev">
+                            <a href="#"><&nbsp;이전</a>
+                        </span>
+                        <span class="num">
+                            <a href="#" class="on">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                        </span>
+                        <span class="next">
+                            <a href="#">다음&nbsp;></a>
+                        </span>
+                        </div>
+
+                </section>                
+
+                
+                <p class="ico info">
+                    <strong>Tip!</strong>
+                    주문현황입니다. 고객의 입금을 확인하면 입금 확인 완료를 체크해주십시오. 
+                </p>
+
+                
+
+                <!-- 주문현황 컨텐츠 끝 -->
+            </section>
+        </main>
+        <footer>
+            <div>
+                <p>Copyright ©kmarket.co.kr All rights reserved. KMARKET ADMINISTRATOR Version 5.4.1.2</p>
+            </div>
+        </footer>
+    </div>    
+</body>
+</html>

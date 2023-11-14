@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <div id="myfirstchart" style="height: 250px; width: 600px;"></div>
+    
+
+</body>
+</html>
+<script>
+
+    
+    new Morris.Line({
+  // ID of the element in which to draw the chart.
+  element: 'myfirstchart',
+  // Chart data records -- each entry in this array corresponds to a point on
+  // the chart.
+
+  data: [
+  /*  { indate: '2023-09-13'  , value: 220 },
+    { indate: '2023-09-14'  , value: 108 },
+    { indate: '2023-09-15'  , value: 130 },
+    { indate: '2023-09-16'  , value: 10 },
+    { indate: '2023-09-17'  , value: 56 },
+    { indate: '2023-09-18'  , value: 59 },
+    { indate: '2023-09-19'  , value: 300 }*/
+    { adate:'2023-01', a: 300, b: 20,  c: 660 },
+    { adate:'2023-02', a: 440, b: 150, c: 110 },
+    { adate:'2023-03', a: 451, b: 110, c: 10 },
+    { adate:'2023-04', a: 311, b: 10,  c: 190 },
+    { adate:'2023-05', a: 100, b: 500, c: 701 },
+    { adate:'2023-06', a: 20,  b: 500, c: 11 },
+    { adate:'2023-07', a: 20,  b: 500, c: 11 }
+    // 모리스 차트 단점 1. x축 라벨이 무조건 년도 or 년도 + 월 로만 
+    // 표기 가능하다. 다른식으로 넣으면 간격이 깨지거나 1900년대부터 나옴
+    // 
+  ],
+  // The name of the data record attribute that contains x-values.
+  xkey: 'adate',
+
+  xLabels:'month',
+  //xLabelAngle:45 , 기울이기
+  // A list of names of data record attributes that contain y-values.
+  ykeys: ['a','b','c'],
+  // Labels for the ykeys -- will be displayed when you hover over the
+  // chart.
+  labels: ['a데이터','b데이터','c데이터']
+
+
+});
+
+
+</script>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <div id="myfirstchart" style="height: 250px;"></div>
+    <div id="line-example" style="height: 250px;"></div>
+
+</body>
+</html>
+<script>
+Morris.Line({
+  element: 'line-example',
+  data: [
+    { y: '119', a: 100, b: 90 },
+    { y: '207', a: 75,  b: 65 },
+    { y: '208', a: 50,  b: 40 },
+    { y: '209', a: 75,  b: 65 },
+    { y: '200', a: 50,  b: 40 },
+    { y: '201', a: 75,  b: 65 },
+    { y: '202', a: 100, b: 90 }
+  ],
+  xkey: 'y',
+  ykeys: ['a', 'b'],
+  labels: ['Series A', 'Series B']
+});
+
+
+</script>
+

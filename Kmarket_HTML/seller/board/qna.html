@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>케이마켓::판매자</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>    
+    <script src="../js/gnb.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/seller.css">
+</head>
+<body>
+    <div id="seller-wrapper">
+        <header>
+            <div>
+                <a href="./index.html" class="logo"><img src="./img/admin_logo.png" alt="admin_logo"/></a>
+                <p>
+                    <span>홍길동님 반갑습니다.</span>
+                    <a href="#">HOME |</a>
+                    <a href="#">로그아웃 |</a>
+                    <a href="#">고객센터</a>
+                </p>
+            </div>
+        </header>
+        <main>
+            <aside>
+                <!-- Global Navigation Bar -->
+                <ul id="gnb">
+                    <li>
+                        <a href="#"><i class="fas fa-box-open" aria-hidden="true"></i>상품관리</a>
+                        <ol>
+                            <li><a href="/seller/product/list.html">상품현황</a></li>
+                            <li><a href="/seller/product/register.html">상품등록</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i>주문관리</a>
+                        <ol>
+                            <li><a href="/seller/order/order.html">주문현황</a></li>
+                            <li><a href="/seller/order/delivery.html">취소/반품/교환</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>고객문의</a>
+                        <ol>
+                            <li><a href="/seller/board/qna.html">Kmarket사용문의</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </aside>
+            <section id="seller-board-qna">
+                <nav>
+                    <h3>Kmarket사용문의</h3>
+                    <p>
+                        HOME > 고객문의 > <strong>Kmarket사용문의</strong>
+                    </p>
+                </nav>
+                <!-- kmarket사용문의 컨텐츠 시작 -->        
+                <!-- 자기 문의한 글만 볼수있는 list, 글쓰기 버튼도 구현하기 -->                        
+                <section>
+                    <div>
+                        <select name="search">
+                            <option value="search1">제목</option>
+                            <option value="search2">글쓴이</option>
+                        </select>
+                        <input type="text" name="search">
+                    </div>
+                    
+                    <table>
+                        <tr>
+                            <th>글번호</th>
+                            <th>문의내용</th>
+                            <th>답변완료</th>
+                            <th>작성일자</th>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>이거 어떡해야하나요</td>
+                            <td>완료</td>
+                            <td>23-05-25</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>이거 어떡해야하나요</td>
+                            <td>미완료</td>
+                            <td>23-05-25</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>이거 어떡해야하나요</td>
+                            <td>완료</td>
+                            <td>23-05-25</td>
+                        </tr>
+                                               
+                    </table>
+                    
+                    <input class="btnWrite" type="button" value="문의하기" /> 
+
+                    <div class="paging">
+                        <span class="prev">
+                            <a href="#"><&nbsp;이전</a>
+                        </span>
+                        <span class="num">
+                            <a href="#" class="on">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                        </span>
+                        <span class="next">
+                            <a href="#">다음&nbsp;></a>
+                        </span>
+                        </div>
+
+                </section>                
+
+                
+                <p class="ico info">
+                    <strong>Tip!</strong>
+                    사이트 이용 시 불편한 점이 있다면 문의해주십시오. 
+                </p>
+
+                
+
+                <!-- kmarket사용문의 컨텐츠 끝 -->
+            </section>
+        </main>
+        <footer>
+            <div>
+                <p>Copyright ©kmarket.co.kr All rights reserved. KMARKET ADMINISTRATOR Version 5.4.1.2</p>
+            </div>
+        </footer>
+    </div>    
+</body>
+</html>
